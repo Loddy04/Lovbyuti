@@ -1,0 +1,195 @@
+
+body {
+    margin: 0;
+    background-color: rgb(255, 226, 254) !important;
+}
+
+/* NAVBAR */
+
+.navbarpage {
+    justify-content: space-between;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: rgb(226, 40, 130);
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 5rem;
+}
+
+.listnav {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.listnav:hover {
+    color: rgb(226, 40, 130);
+}
+
+.nav {
+    margin-top: 7px;
+    gap: 5rem;
+}
+
+/* TEXT IMG 1 */
+
+.txtimg1 {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    background-color: rgb(226, 40, 130);
+}
+
+.img1 {
+    width: 448px;
+    height: 476px;
+}
+
+.text-overlay {
+    padding-left: 150px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+}
+
+.text1 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.text1 p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+.text-overlay h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.mulai {
+    display: flex;
+}
+
+.login {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login:hover {
+    border-color:rgb(226, 40, 130);
+    color: rgb(226, 40, 130);
+    background-color: white
+}
+
+.regis {
+    margin-left: 1rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.regis:hover {
+    border-color:rgb(226, 40, 130);
+    color: rgb(226, 40, 130);
+    background-color: white
+}
+
+body {
+    margin: 0;
+    background-color: rgb(255, 226, 254) !important;
+}
+
+/* NAVBAR */
+
+.navbarpage {
+    justify-content: space-between;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: rgb(226, 40, 130);
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 5rem;
+}
+
+.listnav {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.listnav:hover {
+    color: rgb(226, 40, 130);
+}
+
+.nav {
+    margin-top: 7px;
+    gap: 5rem;
+}
+
+/* TEXT IMG 1 */
+
+.txtimg1 {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    background-color: rgb(226, 40, 130);
+}
+
+.img1 {
+    width: 448px;
+    height: 476px;
+}
+
+.text-overlay {
+    padding-left: 150px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+}
+
+.text1 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.text1 p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+.text-overlay h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
