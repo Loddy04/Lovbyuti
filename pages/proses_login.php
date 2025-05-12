@@ -9,13 +9,19 @@ $password = $_POST['password'];
 $query = "SELECT * FROM users WHERE email= '$email' AND password='$password'";
 $result = mysqli_query($connect, $query);
 
-if (mysqli_num_rows($result) == 1) {
+if (mysqli_num_rows($result) > 0) {
     $user = mysqli_fetch_assoc($result);
     $_SESSION['id'] = $user['id_user'];
     $_SESSION['nama'] = $user['nama'];
-    header("Location: dashboard.php");
+
+    if ($user['email'] == 'admin123@gmail.com' && $user['password'] == 'admin123') {
+    header("Location: dashboard_admin.php");
+        
+    } else {
+        header("Location: dashboard.php");
+    }
     exit;
-} else {
+    } else {
     header("Location: login.php?pesan=gagal");
 }
 ?>
