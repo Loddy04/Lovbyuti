@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -41,11 +41,14 @@
             <td>
                 <a href="form_edit.php?id_booking=<?php echo $data['id_booking'];?>">Edit</a>
             </td>
+            <td>
+                <div class="p-2 border btn btn-danger text-center me-4" id="navreg"><a onclick="return confirm('Apakah anda yakin ingin hapus akun?')" href="pesanan_hapus.php?id_booking=<?= $data['id_booking']; ?>" style="color: black">Hapus Akun</a></div>
+            </td>
         </tr>
 
         <?php
         }
         ?>
     </table>
-    
+    <body>
 </html>
