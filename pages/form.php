@@ -27,8 +27,6 @@
         <label for="wa">Wanita</label>
         <input type="radio" name="preferensi" id="pr" value="Pria">
         <label for="pr">Pria</label><br>
-        <!-- <label for="tm">Tidak Masalah</label>
-        <input type="radio" name="preferensi" id="tm" value="Tidak Masalah"> -->
         <label for="kl">Keluhan</label><br>
         <textarea name="keluhan" id="kl"></textarea><br>
         <label for="">Reminder</label><br>
