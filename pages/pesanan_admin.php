@@ -11,6 +11,18 @@ session_start();
     
 </head>
 <body>
+        <!-- <form action="">
+            <label for="pilih outlet" class="form-label">Pilih Outlet</label>
+            <select class="form-select" id="weapon" name="outlet">
+                <option value="" selected disabled>Pilih Outlet</option>
+                <option value="yk">Klinik LovByuti Yogyakarta</option>
+                <option value="sl">Klinik LovByuti Sleman</option>
+                <option value="bt">Klinik LovByuti Bantul</option>
+                <option value="gk">Klinik LovByuti Gunungkidul</option>
+                <option value="kp">Klinik LovByuti Kulon Progo</option>
+            </select>
+        </form>
+        <br> -->
         <table border="1">
         <tr>
             <td>id booking</td>
@@ -26,16 +38,35 @@ session_start();
 
         <?php 
             include "koneksi.php";
-            $query = mysqli_query($connect, "SELECT * FROM bookings");
-            while ($data = mysqli_fetch_array($query)) {
+            $query = mysqli_query($connect, "SELECT 
+                                    b.id_booking,
+                                    u.nama AS nama_user,
+                                    o.nama AS outlet,
+                                    t.nama_treatmen,
+                                    th.nama AS nama_therapist,
+                                    b.keluhan,
+                                    b.tanggal,
+                                    b.jam,
+                                    b.reminder
+                                FROM 
+                                    bookings AS b
+                                JOIN 
+                                    users AS u ON b.id_user = u.id_user
+                                JOIN 
+                                    outlets AS o ON b.id_outlet = o.id_outlet
+                                JOIN 
+                                    treatmens AS t ON b.id_treatmen = t.id_treatmen
+                                JOIN 
+                                    therapists AS th ON b.id_therapist = th.id_therapist");
+                                            while ($data = mysqli_fetch_array($query)) {
         ?>
 
         <tr>
             <td><?= $data['id_booking']?></td>
-            <td><?= $data['id_user']?></td>
-            <td><?= $data['id_outlet']?></td>
-            <td><?= $data['id_treatmen']?></td>
-            <td><?= $data['id_therapist']?></td>
+            <td><?= $data['nama_user']?></td>
+            <td><?= $data['outlet']?></td>
+            <td><?= $data['nama_treatmen']?></td>
+            <td><?= $data['nama_therapist']?></td>
             <td><?= $data['keluhan']?></td>
             <td><?= $data['tanggal']?></td>
             <td><?= $data['jam']?></td>

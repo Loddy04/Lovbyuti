@@ -18,8 +18,6 @@
     
             <ul class="navbarpage nav">
                 <li class="nav-item"><a class="listnav" href="#">Home</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Treatment</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Blog</a></li>
                 <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
                 <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
             </ul>
