@@ -13,7 +13,7 @@
         <div class="card col-md-7 col-lg-8 ">
             <h4 class="d-flex just justify-content-center mb-3 fs-2">Login Account</h4>
             <!-- FORM -->
-            <form action="proses_login.php" method="POST" class="needs-validation" novalidate="">
+            <form action="login.php" method="POST" class="needs-validation" novalidate="">
                 <hr class="mb-3 mt-3">
                 <!-- EMAIL  -->
                 <div class="col-12 mb-3">

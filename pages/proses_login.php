@@ -20,7 +20,6 @@ if (mysqli_num_rows($result) > 0) {
     } else {
         header("Location: dashboard.php");
     }
-    exit;
     } else {
     header("Location: login.php?pesan=gagal");
 }

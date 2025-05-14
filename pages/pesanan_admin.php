@@ -16,10 +16,11 @@ session_start();
             <td>id booking</td>
             <td>nama</td>
             <td>outlet</td>
+            <td>treatment</td>
+            <td>therapist</td>
+            <td>keluhan</td>
             <td>tanggal</td>
             <td>jam</td>
-            <td>preferensi</td>
-            <td>keluhan</td>
             <td>reminder</td>
         </tr>
 
@@ -33,10 +34,11 @@ session_start();
             <td><?= $data['id_booking']?></td>
             <td><?= $data['id_user']?></td>
             <td><?= $data['id_outlet']?></td>
+            <td><?= $data['id_treatmen']?></td>
+            <td><?= $data['id_therapist']?></td>
+            <td><?= $data['keluhan']?></td>
             <td><?= $data['tanggal']?></td>
             <td><?= $data['jam']?></td>
-            <td><?= $data['preferensi']?></td>
-            <td><?= $data['keluhan']?></td>
             <td><?= $data['reminder']?></td>
             <td>
                 <a href="form_edit.php?id_booking=<?php echo $data['id_booking'];?>">Edit</a>
