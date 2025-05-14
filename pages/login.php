@@ -1,3 +1,35 @@
+<?php
+    session_start();
+    include 'koneksi.php';
+
+    if(isset($_POST['login'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $query = "SELECT * FROM users WHERE email = '$email' and password = '$password'";
+        $data = mysqli_query($connect, $query);
+
+
+        if (mysqli_num_rows($data) > 0) {
+            $user = mysqli_fetch_array($data);
+            $_SESSION['user'] = $data;
+            $_SESSION['id'] = $user['id_user'];
+            $_SESSION['nama'] = $user['nama'];
+            
+            if ($user['email'] == 'admin123@gmail.com' && $user['password'] == 'admin123') {
+            header("Location: dashboard_admin.php");
+        } else {
+            header("Location: dashboard.php");
+            
+        }
+        exit;
+        } else {
+            header("Location: login.php?pesan=gagal");
+        exit;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +66,7 @@
                 <hr class="mb-3 mt-4">
                 <div class="tombol">
                     <div class="mt-2"><a href="register.php" id="register">Buat Akun</a></div>
-                    <button class="btn btn-primary btn-lg" type="submit">Masuk</button>
+                    <button class="btn btn-primary btn-lg" type="submit" name="login">Masuk</button>
                 </div>
             </form>
         </div>
