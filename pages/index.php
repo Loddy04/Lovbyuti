@@ -4,25 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LovByuti || Landing Page</title>
-    <link rel="stylesheet" href="../styling/index.css">
+    <link rel="stylesheet" href="../style/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
-<body>
+<body>  
     <!-- NAVBAR -->
-    <div class="navbarpage container">
+    <!-- <div class="navbarpage navdex">
         <header class="d-flex flex-wrap justify-content-center">
             <span href="/" class="d-flex align-items-center mb-3 mb-md-0">
                 <svg class="bi me-2" width="20" height="20" aria-hidden="true"></svg>
                 <span class="brand">LOVBYUTI</span>
             </span>
-    
             <ul class="navbarpage nav">
                 <li class="nav-item"><a class="listnav" href="#">Home</a></li>
                 <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
                 <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
             </ul>
         </header>
+    </div> -->
+
+<div class="navdex">
+    <div class="navbarpage">
+        <header class="d-flex">
+            <span class="brand">LOVBYUTI</span>
+            <ul class="nav">
+                <li class="nav-item"><a class="listnav" href="#">Home</a></li>
+                <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
+                <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
+            </ul>
+        </header>
     </div>
+</div>
+
+<!-- 
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+    <a class="navbar-brand" href="#">LOVBYUTI</a>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link" href="#scrollspyHeading1">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#scrollspyHeading2">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#scrollspyHeading3">Contact Us</a></li>
+    </ul>
+    </nav>
+
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading1">First heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading2">Second heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading3">Third heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading4">Fourth heading</h4>
+        <p>...</p>
+        <h4 id="scrollspyHeading5">Fifth heading</h4>
+        <p>...</p>
+    </div> -->
 
     <!-- TEXT IMAGE 1 -->
     <div class="txtimg1">
@@ -43,6 +79,7 @@
         <!-- img -->
         <img class="img1" src="../assets/indedximg1.png" alt="">
     </div>
+        <img class="img1" src="../assets/indedximg1.png" alt="">
     <?php
         if (isset($_GET['pesan'])) {
             if ($_GET['pesan'] == "logout") {

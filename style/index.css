@@ -1,0 +1,138 @@
+
+body {
+    margin: 0;
+    background-color: rgb(255, 226, 254) !important;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navdex {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 226, 254);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbarpage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 25px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.brand {
+    padding-right: 4rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(226, 40, 130);
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.listnav {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.listnav:hover {
+    color: rgb(226, 40, 130);
+}
+
+/* TEXT IMG 1 */
+
+.txtimg1 {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    background-color: rgb(226, 40, 130);
+}
+
+.img1 {
+    width: 448px;
+    height: 476px;
+}
+
+.text-overlay {
+    padding-left: 150px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+}
+
+.text1 {
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.text1 p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+.text-overlay h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.mulai {
+    display: flex;
+}
+
+.login {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login:hover {
+    border-color:rgb(226, 40, 130);
+    color: rgb(226, 40, 130);
+    background-color: white
+}
+
+.regis {
+    margin-left: 1rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.regis:hover {
+    border-color:rgb(226, 40, 130);
+    color: rgb(226, 40, 130);
+    background-color: white
+}
+

@@ -1,17 +1,21 @@
-
 body {
     margin: 0;
     background-color: rgb(255, 226, 254) !important;
 }
 
 /* NAVBAR */
-
 .navbarpage {
     justify-content: space-between;
     font-family: 'Cormorant Garamond', serif;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding: 15px 0;
     color: rgb(226, 40, 130);
+    /* Sticky navbar properties */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(255, 192, 231); /* Different pink background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for better visibility */
+    width: 100%;
 }
 
 .brand {
@@ -35,8 +39,14 @@ body {
     gap: 5rem;
 }
 
-/* TEXT IMG 1 */
+/* Make sure navdex class doesn't interfere with sticky behavior */
+.navdex {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
+/* TEXT IMG 1 */
 .txtimg1 {
     justify-content: space-between;
     align-items: center;
@@ -69,7 +79,6 @@ body {
     margin: 0;
     font-size: 15px;
 }
-
 
 .text-overlay h1 {
     font-weight: bold;
@@ -115,81 +124,4 @@ body {
     border-color:rgb(226, 40, 130);
     color: rgb(226, 40, 130);
     background-color: white
-}
-
-body {
-    margin: 0;
-    background-color: rgb(255, 226, 254) !important;
-}
-
-/* NAVBAR */
-
-.navbarpage {
-    justify-content: space-between;
-    font-family: 'Cormorant Garamond', serif;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    color: rgb(226, 40, 130);
-}
-
-.brand {
-    font-size: 22px;
-    font-weight: bold;
-    margin-right: 5rem;
-}
-
-.listnav {
-    color: black;
-    font-size: 15px;
-    text-decoration: none;
-}
-
-.listnav:hover {
-    color: rgb(226, 40, 130);
-}
-
-.nav {
-    margin-top: 7px;
-    gap: 5rem;
-}
-
-/* TEXT IMG 1 */
-
-.txtimg1 {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    width: 100vw;
-    background-color: rgb(226, 40, 130);
-}
-
-.img1 {
-    width: 448px;
-    height: 476px;
-}
-
-.text-overlay {
-    padding-left: 150px;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    max-width: none;
-    font-family: 'Cormorant Garamond', serif;
-    color: white;
-}
-
-.text1 {
-    margin-top: 10px;
-    margin-bottom: 35px;
-}
-
-.text1 p {
-    margin: 0;
-    font-size: 15px;
-}
-
-
-.text-overlay h1 {
-    font-weight: bold;
-    font-size: 30px;
 }
