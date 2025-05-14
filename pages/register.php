@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+include 'koneksi.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama'];
+    $no_hp = $_POST['no_hp'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $umur = $_POST['umur'];
+    $jenis_kelamin = $_POST['jenis_kelamin'];
+    $alamat = $_POST['alamat'];
+
+    $query = "INSERT INTO users (nama, no_hp, email, password, umur, jenis_kelamin, alamat)
+                VALUES ('$nama', '$no_hp', '$email', '$password', '$umur', '$jenis_kelamin', '$alamat')";
+
+    if (mysqli_query($connect, $query)) {
+        header("Location: index.php?pesan=sudah");
+    } else {
+        echo "Error: " . mysqli_error($connect);
+    }
+}
+
+?>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +35,7 @@
         <div class="card col-md-7 col-lg-8 ">
             <h4 class="d-flex just justify-content-center mb-3">Pendaftaran Akun</h4>
             <!-- FORM -->
-                <form action="proses_register.php" method="POST">
+                <form action="register.php" method="POST">
                     <div class="row g-3 ">
                     <!-- USERNAME -->
                     <div class="col-sm-12">

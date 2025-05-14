@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+
+.flex-row {
+-webkit-box-orient: horizontal !important;
+-webkit-box-direction: normal !important;
+-ms-flex-direction: row !important;
+flex-direction: row !important;
+  display: flex;
+    flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 226, 254) !important;;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+.card-2 {
+  position: relative;
+  width: 270px;
+  height: 330px;
+  color: #a18a96;
+  background: url(../assets/regisimg.jpg) center no-repeat;
+  background-size: cover;
+
+  border-radius: 15px;
+  box-shadow: 20px 20px 30px -20px #00000040; 
+  
+  overflow: hidden;
+
+  
+  
+}
+
+.card-content2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  transform: translateY(65%);
+  transition: transform .25s;
+}
+.card-content2:before{
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #fff;
+}
+
+.card-title{
+  color: #6a515e;
+  line-height: 15px;
+}
+
+.card-subtitle{
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card-description{
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .5s;
+  margin-bottom: 40px;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.duration, .price {
+  padding: 6px 12px;
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.duration i {
+  margin-right: 6px;
+}
+
+.card-2:hover .card-content2{
+  transform: translateY(0);
+}
+.card-2:hover .card-description{
+  opacity: 1;
+  transition-delay: .25s;
+}
