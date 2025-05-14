@@ -45,7 +45,7 @@ if (!isset($_SESSION['id'])) {
                 <p>Bersama Lovbyuti, temukan perjalanan perawatan kulit yang personal, aman, dan memanjakan.</p>
             </div>
             <div class="mulai">
-                <div><a class="login" href="booking/form.php">Booking sekarang</a></div>
+                <div><a class="login" href="form.php">Booking sekarang</a></div>
                 <div><a class="regis" href="logout.php">Logout</a></div>
             </div>
         </div>

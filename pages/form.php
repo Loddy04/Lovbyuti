@@ -139,5 +139,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </div>
+    <!-- form untuk booking -->
+    <h2>Booking Online</h2>
+    <form action="form.php" method="POST">
+        <label for="ot">Outlet</label>
+        <select id="ot" name="outlet" required="">
+            <option value="">Pilih Outlet</option>
+            <?php
+            $cabang = $connect->query("SELECT * FROM outlets");
+            while ($c = $cabang->fetch_assoc()) {
+                echo "<option value='{$c['id_outlet']}'>{$c['nama']}</option>";
+            }
+            ?>
+        </select><br>
+        <label for="tm">Treatmen</label>
+        <select id="tm" name="treatmen" required="">
+            <option value="">Pilih Treatmen</option>
+            <?php
+            $perawatan = $connect->query("SELECT * FROM treatmens");
+            while ($c = $perawatan->fetch_assoc()) {
+                echo "<option value='{$c['id_treatmen']}'>{$c['nama_treatmen']}</option>";
+            }
+            ?>
+        </select><br>
+        <label for="kl">Keluhan</label><br>
+        <textarea name="keluhan" id="kl"></textarea><br>
+        <label for="tgl">Tanggal</label>
+        <input type="date" name="tanggal" id="tgl"><br>
+        <label for="jm">Jam</label>
+        <input type="time" name="jam" id="jm"><br>
+        <label for="">Preferensi Terapis</label><br>
+        <input type="radio" name="preferensi" id="wa" value="Wanita">
+        <label for="wa">Wanita</label>
+        <input type="radio" name="preferensi" id="pr" value="Pria">
+        <label for="pr">Pria</label><br>
+        <label for="kl">Keluhan</label><br>
+        <textarea name="keluhan" id="kl"></textarea><br>
+        <select id="jm" name="jam" required="">
+            <option value="">Pilih Jam</option>
+            <?php
+            $jamMulai = strtotime("09:00");
+            $jamSelesai = strtotime("17:00");
+            while ($jamMulai < $jamSelesai) {
+                $jamFormatted = date("H:i", $jamMulai);
+                echo "<option value='$jamFormatted'>$jamFormatted</option>";
+                $jamMulai += 1800;
+            }
+            ?>
+        </select><br>
+        <label for="">Reminder</label><br>
+        <input type="checkbox" id="wa" name="reminder[]" value="Ingatkan Saya Melalui WA">
+        <label for="wa">Ingatkan Saya Melalui WA</label><br>
+        <input type="checkbox" id="em" name="reminder[]" value="Ingatkan Saya Melalui E-mail">
+        <label for="em">Ingatkan Saya Melalui E-mail</label><br>
+        <button type="submit">Booking now</button>
+    </form>
 </body>
 </html>
