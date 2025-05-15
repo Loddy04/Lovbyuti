@@ -63,13 +63,27 @@ body {
     align-items: center;
     display: flex;
     width: 100vw;
-    background-color: rgb(226, 40, 130);
-    margin-bottom: 200px;
+        background-image: 
+        linear-gradient(rgb(226, 40, 130),
+        rgb(213, 34, 121));
+    margin-bottom: 100px;
 }
 
 .img1 {
     width: 500px;
     height: 500px;
+}
+
+.img2 {
+    width: 1280px;
+    height: 700px;
+    padding-bottom: 100px;
+}
+
+.img3 {
+    width: 1280px;
+    height: 700px;
+    margin-bottom: 70px;
 }
 
 .text-overlay {
@@ -141,13 +155,15 @@ body {
 
 .regis:hover {
     border-color:rgb(226, 40, 130);
-    color: rgb(226, 40, 130);
+    color: rgb(0, 0, 0);
     background-color: white
 }
 
 /* FOOTER */
 .footer-container {
-    background-color: rgb(226, 40, 130);
+    background-image: 
+        linear-gradient(rgb(226, 40, 130),
+        rgb(172, 17, 92));
     color: white;
     padding: 40px 0 0 0;
     margin-top: 30px;

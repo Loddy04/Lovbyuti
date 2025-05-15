@@ -15,6 +15,7 @@
             <span class="brand">LOVBYUTI</span>
             <ul class="nav">
                 <li class="nav-item"><a class="listnav" href="#">Home</a></li>
+                <li class="nav-item"><a class="listnav" href="#">Treatmen</a></li>
                 <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
                 <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
             </ul>
@@ -40,7 +41,13 @@
         <!-- img -->
         <img class="img1" src="../assets/indedximg1.png" alt="">
     </div>
-        <img class="img1" src="../assets/indedximg1.png" alt="">
+    <div>
+        <img class="img2" src="../assets/pinkgrenish.jpg" alt="">
+    </div>
+    <div>
+        <img class="img3" src="../assets/regisimg.jpg" alt="">
+    </div>
+        
 
 <!-- Footer -->
 <div class="footer-container"> 
