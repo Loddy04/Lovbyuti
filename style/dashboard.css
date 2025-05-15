@@ -1,58 +1,203 @@
-body {
-    margin: 0;
-    background-color: rgb(255, 226, 254) !important;
-}
-
 /* NAVBAR */
-.navbarpage {
-    justify-content: space-between;
-    font-family: 'Cormorant Garamond', serif;
-    padding: 15px 0;
-    color: rgb(226, 40, 130);
-    /* Sticky navbar properties */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: rgb(255, 192, 231); /* Different pink background color */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for better visibility */
-    width: 100%;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  --accent-color: rgb(226, 40, 130);
+  --gradient-color: rgb(255, 226, 254);
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, rgb(255, 226, 254) 0%, rgb(255, 192, 232) 100%);
 }
 
-.brand {
-    font-size: 22px;
-    font-weight: bold;
-    margin-right: 5rem;
+
+
+.sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background-color: rgb(255, 245, 252);
+  transition: all .5s ease;
+}
+.sidebar header{
+  font-size: 28px;
+  color: rgb(80, 25, 80);
+  line-height: 70px;
+  text-align: center;
+  background-color: rgb(255, 245, 252);
+  user-select: none;
+  font-family: 'Lato', sans-serif;
+}
+.sidebar a{
+  display: flex;
+  align-items: center;
+  height: 65px;
+  width: 100%;
+  color: rgb(80, 25, 80);
+  line-height: 65px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  font-family: 'Lato', sans-serif;
+  transition: all .5s ease;
+}
+a.active,a:hover{
+  border-left: 5px solid var(--accent-color);
+  color: rgb(80, 25, 80);;
+  background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+
+}
+.sidebar a i{
+  flex-shrink: 0; 
+  font-size: 23px;
+  margin-right: 16px;
+  line-height: 1;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: fixed;
+  top: 20px;
+  left: 5px;
+  z-index: 500;
+  /* position: absolute;
+  left: 5px; */
+  cursor: pointer;
+  color: rgb(226, 40, 130);
+  border-radius: 5px;
+  margin: 15px 30px;
+  font-size: 29px;
+  background-color: rgb(255, 226, 254);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    inset -7px -7px 10px 0px rgba(0,0,0,.05),
+   3.5px 3.5px 20px 0px rgba(0,0,0,.05),
+   2px 2px 5px 0px rgba(0,0,0,.05);
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  line-height: 45px;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+#check:checked ~ .txtimg1 {
+  transform: translateX(240px);
+  transition: transform 0.5s ease;
 }
 
-.listnav {
-    color: black;
-    font-size: 15px;
-    text-decoration: none;
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-.listnav:hover {
-    color: rgb(226, 40, 130);
+.sidebar > a.active,.sidebar > a:hover:nth-child(even) {
+  --accent-color: rgb(226, 40, 130);
+  --gradient-color: rgb(255, 192, 232);
+}
+.sidebar a.active,.sidebar > a:hover:nth-child(odd) {
+  --accent-color: rgb(255, 142, 214);
+  --gradient-color: rgb(255, 226, 254);
 }
 
-.nav {
-    margin-top: 7px;
-    gap: 5rem;
+
+.frame {
+  width: 50%;
+  height: 30%;
+  margin: auto;
+  text-align: center;
 }
 
-/* Make sure navdex class doesn't interfere with sticky behavior */
-.navdex {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+h2 {
+  position: relative;
+  text-align: center;
+  color: rgb(226, 40, 130);
+  font-size: 60px;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  color: #a759f5;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  /* text-align: center; */
+  font-size: 30px;
+  color: white;
+  margin: 0;
 }
 
 /* TEXT IMG 1 */
+
 .txtimg1 {
     justify-content: space-between;
     align-items: center;
     display: flex;
     width: 100vw;
     background-color: rgb(226, 40, 130);
+    transition: transform 0.5s ease;
 }
 
 .img1 {
@@ -79,6 +224,7 @@ body {
     margin: 0;
     font-size: 15px;
 }
+
 
 .text-overlay h1 {
     font-weight: bold;
@@ -125,3 +271,4 @@ body {
     color: rgb(226, 40, 130);
     background-color: white
 }
+
