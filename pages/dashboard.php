@@ -12,26 +12,23 @@ if (!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LovByuti || Dashboard</title>
-    <link rel="stylesheet" href="../styling/dashboard.css">
+    <link rel="stylesheet" href="../style/dashboard.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
     <!-- NAVBAR -->
-    <div class="navbarpage container">
-        <header class="d-flex flex-wrap justify-content-center">
-            <span href="/" class="d-flex align-items-center mb-3 mb-md-0">
-                <svg class="bi me-2" width="20" height="20" aria-hidden="true"></svg>
-                <span class="brand">LOVBYUTI</span>
-            </span>
-    
-            <ul class="navbarpage nav">
+<div class="navdex">
+    <div class="navbarpage">
+        <header class="d-flex">
+            <span class="brand">LOVBYUTI</span>
+            <ul class="nav">
                 <li class="nav-item"><a class="listnav" href="#">Home</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Treatment</a></li>
                 <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
                 <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
             </ul>
         </header>
     </div>
+</div>
 
     <!-- TEXT IMAGE 1 -->
     <div class="txtimg1">
