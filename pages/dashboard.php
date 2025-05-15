@@ -19,18 +19,6 @@ if (!isset($_SESSION['id'])) {
 </head>
 <body>
     <!-- NAVBAR -->
-<div class="navdex">
-    <div class="navbarpage">
-        <header class="d-flex">
-            <span class="brand">LOVBYUTI</span>
-            <ul class="nav">
-                <li class="nav-item"><a class="listnav" href="#">Home</a></li>
-                <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
-            </ul>
-        </header>
-    </div>
-</div>
     <input type="checkbox" id="check">
         <label for="check">
         <i class="fas fa-bars" id="btn"></i>

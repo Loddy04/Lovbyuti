@@ -17,18 +17,22 @@ if (!isset($_SESSION['id'])) {
 </head>
 <body>
     <!-- NAVBAR -->
-<div class="navdex">
-    <div class="navbarpage">
-        <header class="d-flex justify-content-center">
-            <span class="brand">LOVBYUTI</span>
-            <ul class="nav">
+    <div class="navbarpage container">
+        <header class="d-flex flex-wrap justify-content-center">
+            <span href="/" class="d-flex align-items-center mb-3 mb-md-0">
+                <svg class="bi me-2" width="20" height="20" aria-hidden="true"></svg>
+                <span class="brand">LOVBYUTI</span>
+            </span>
+    
+            <ul class="navbarpage nav">
                 <li class="nav-item"><a class="listnav" href="#">Home</a></li>
+                <li class="nav-item"><a class="listnav" href="#">Treatment</a></li>
+                <li class="nav-item"><a class="listnav" href="#">Blog</a></li>
                 <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
                 <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
             </ul>
         </header>
     </div>
-</div>
 
     <!-- TEXT IMAGE 1 -->
     <div class="txtimg1">
