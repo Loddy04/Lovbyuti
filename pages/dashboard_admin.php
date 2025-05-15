@@ -38,12 +38,7 @@ if (!isset($_SESSION['id'])) {
     <div class="txtimg1">
         <!-- teks card -->
         <div class="text-overlay">
-            <h1>Selamat datang, <?php echo $_SESSION['nama']; ?>!</h1>
-            <div class="text1">
-                <!-- <p>Login untuk booking perawatan kecantikanmu.</p> -->
-                <p>Kami percaya bahwa setiap kulit memiliki keunikan dan potensi untuk bersinar lebih cerah.</p>
-                <p>Bersama Lovbyuti, temukan perjalanan perawatan kulit yang personal, aman, dan memanjakan.</p>
-            </div>
+            <h1>Selamat datang, <?php echo $_SESSION['nama']; ?>!</h1><br><br>
             <div class="mulai">
                 <div><a class="login" href="pesanan_admin.php">Lihat Pesanan</a></div>
                 <div><a class="regis" href="logout.php">Logout</a></div>

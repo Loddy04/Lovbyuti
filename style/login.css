@@ -30,35 +30,11 @@ body {
     width: 90%;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background-image: 
-        linear-gradient(rgb(226, 40, 130),
-        rgba(0, 0, 0, 0.647)),
-        url(../assets/regisimg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .wrapper {
     overflow-y: auto;
     max-height: 90vh;
     width: 70%;
     padding: 20px;
-}
-
-.card {
-    border-radius: 20px !important;
-    margin: auto;
-    padding: 30px;
-    background-color: rgba(254, 218, 252, 0.795) !important;
-    max-width: 900px;
-    width: 90%;
 }
 
 .tombol {

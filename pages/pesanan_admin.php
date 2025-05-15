@@ -11,18 +11,6 @@ session_start();
     
 </head>
 <body>
-        <!-- <form action="">
-            <label for="pilih outlet" class="form-label">Pilih Outlet</label>
-            <select class="form-select" id="weapon" name="outlet">
-                <option value="" selected disabled>Pilih Outlet</option>
-                <option value="yk">Klinik LovByuti Yogyakarta</option>
-                <option value="sl">Klinik LovByuti Sleman</option>
-                <option value="bt">Klinik LovByuti Bantul</option>
-                <option value="gk">Klinik LovByuti Gunungkidul</option>
-                <option value="kp">Klinik LovByuti Kulon Progo</option>
-            </select>
-        </form>
-        <br> -->
         <table border="1">
         <tr>
             <td>id booking</td>
@@ -72,7 +60,7 @@ session_start();
             <td><?= $data['jam']?></td>
             <td><?= $data['reminder']?></td>
             <td>
-                <a href="form_edit.php?id_booking=<?php echo $data['id_booking'];?>">Edit</a>
+                <a href="pesanan_edit.php?id_booking=<?php echo $data['id_booking'];?>">Edit</a>
             </td>
             <td>
                 <div class="p-2 border btn btn-danger text-center me-4" id="navreg"><a onclick="return confirm('Apakah anda yakin ingin hapus akun?')" href="pesanan_hapus.php?id_booking=<?= $data['id_booking']; ?>" style="color: black">Hapus Akun</a></div>

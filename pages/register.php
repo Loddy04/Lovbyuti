@@ -12,8 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $query = "INSERT INTO users (nama, no_hp, email, password, umur, jenis_kelamin, alamat)
                 VALUES ('$nama', '$no_hp', '$email', '$password', '$umur', '$jenis_kelamin', '$alamat')";
-
+    $data = mysqli_query($connect, $query);
     if (mysqli_query($connect, $query)) {
+        
         header("Location: index.php?pesan=sudah");
     } else {
         echo "Error: " . mysqli_error($connect);
@@ -21,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
-        <div class="wrapper d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="wrapper d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="card col-md-7 col-lg-8 ">
             <h4 class="d-flex just justify-content-center mb-3">Pendaftaran Akun</h4>
             <!-- FORM -->
@@ -92,15 +93,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             <!-- ALAMAT -->
                 <div class="">
-                    <label class="mb-2" for="al" class="">Alamat</label><br>
+                    <label class="mb-1" for="al" class="">Alamat</label><br>
                     <textarea class="form-control" id="al" placeholder="" required="" name="alamat"></textarea><br>
                 </div>
                 <div class="d-flex justify-content-end">
-                <!-- <form action="index,php"><button class="w-45 btn btn-danger btn-lg">Kembali Ke Home</button></form> -->
                 <button class="w-45 btn btn-primary btn-lg tombol" type="submit">Daftar Akun</button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

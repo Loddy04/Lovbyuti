@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 umur = '$umur',
                 jenis_kelamin = '$jenis_kelamin',
                 alamat = '$alamat'
-              WHERE id_user = '$id'";
+                WHERE id_user = '$id'";
 
     if (mysqli_query($connect, $query)) {
         header("Location: profil.php?pesan=berhasil_update");
