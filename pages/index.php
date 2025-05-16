@@ -1,3 +1,33 @@
+<?php
+include 'koneksi.php';
+$result = mysqli_query($connect, "SELECT * FROM outlets");
+$hasil = mysqli_query($connect, "SELECT * FROM treatmens");
+
+while ($baris = mysqli_fetch_assoc($hasil)) {
+    if ($baris['id_treatmen'] == 11) {
+        $t1 = $baris;
+    } elseif ($baris['id_treatmen'] == 22) {
+        $t2 = $baris;
+    } elseif ($baris['id_treatmen'] == 24) {
+        $t3 = $baris;
+    }
+}
+
+while ($row = mysqli_fetch_assoc($result)) {
+    if ($row['id_outlet'] == 1) {
+        $o1 = $row;
+    } elseif ($row['id_outlet'] == 2) {
+        $o2 = $row;
+    } elseif ($row['id_outlet'] == 3) {
+        $o3 = $row;
+    } elseif ($row['id_outlet'] == 4) {
+        $o4 = $row;
+    } elseif ($row['id_outlet'] == 5) {
+        $o5 = $row;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +38,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>  
-
+<!-- NAVBAR -->
 <div class="navdex">
     <div class="navbarpage">
         <header class="d-flex">
@@ -16,8 +46,8 @@
             <ul class="nav">
                 <li class="nav-item"><a class="listnav" href="#">Home</a></li>
                 <li class="nav-item"><a class="listnav" href="#">Treatmen</a></li>
+                <li class="nav-item"><a class="listnav" href="#">Outlet</a></li>
                 <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
             </ul>
         </header>
     </div>
@@ -41,13 +71,110 @@
         <!-- img -->
         <img class="img1" src="../assets/indedximg1.png" alt="">
     </div>
-    <div>
-        <img class="img2" src="../assets/pinkgrenish.jpg" alt="">
+
+<!-- TREATMENS -->
+<div class="branch-cards-section2">
+    <div class="container">
+        <h2 class="section-title2">TOP TREATMENS</h2>
+        <p class="section-desc">Top treatmen yang dimiliki klinik LovByuti.</p>
+
+        <div class="branch-cards-container">
+            <!-- Top row - 3 cards -->
+            <div class="branch-cards-row">
+                <!-- Card 1 -->
+                <div class="branch-card2">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title2"><?= $t1['nama_treatmen'] ?></h3>
+                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="branch-card2">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title2"><?= $t2['nama_treatmen'] ?></h3>
+                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="branch-card2">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title2"><?= $t3['nama_treatmen'] ?></h3>
+                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <img class="img3" src="../assets/regisimg.jpg" alt="">
+</div><br><br><br><br>
+
+<!-- OUTLET CARDS -->
+<div class="branch-cards-section">
+    <div class="container">
+        <h2 class="section-title">Outlet Cabang LovByuti</h2>
+        <p class="section-desc">Temukan cabang LovByuti terdekat dengan lokasi Anda untuk mendapatkan perawatan terbaik.</p>
+
+        <div class="branch-cards-container">
+            <!-- Top row - 3 cards -->
+            <div class="branch-cards-row">
+                <!-- Card 1 -->
+                <div class="branch-card">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title"><?= $o1['nama'] ?></h3>
+                        <p class="branch-address"><?= $o1['alamat'] ?></p>
+                        <p class="branch-phone"><?= $o1['no_hp'] ?></p>
+                        <a href="#" class="btn-visit">Kunjungi</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="branch-card">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title"><?= $o2['nama'] ?></h3>
+                        <p class="branch-address"><?= $o2['alamat'] ?></p>
+                        <p class="branch-phone"><?= $o2['no_hp'] ?></p>
+                        <a href="#" class="btn-visit">Kunjungi</a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="branch-card">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title"><?= $o3['nama'] ?></h3>
+                        <p class="branch-address"><?= $o3['alamat'] ?></p>
+                        <p class="branch-phone"><?= $o3['no_hp'] ?></p>
+                        <a href="#" class="btn-visit">Kunjungi</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom row - 2 cards -->
+            <div class="branch-cards-row justify-content-center">
+                <!-- Card 4 -->
+                <div class="branch-card">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title"><?= $o4['nama'] ?></h3>
+                        <p class="branch-address"><?= $o4['alamat'] ?></p>
+                        <p class="branch-phone"><?= $o4['no_hp'] ?></p>
+                        <a href="#" class="btn-visit">Kunjungi</a>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="branch-card">
+                    <div class="branch-card-body">
+                        <h3 class="branch-title"><?= $o5['nama'] ?></h3>
+                        <p class="branch-address"><?= $o5['alamat'] ?></p>
+                        <p class="branch-phone"><?= $o5['no_hp'] ?></p>
+                        <a href="#" class="btn-visit">Kunjungi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-        
+</div><br><br>
 
 <!-- Footer -->
 <div class="footer-container"> 
@@ -126,24 +253,32 @@
     </div>
 </div>
 
-    <?php
-        if (isset($_GET['pesan'])) {
-            if ($_GET['pesan'] == "logout") {
-                ?>
+
+<?php
+    if (isset($_GET['pesan'])) {
+        if ($_GET['pesan'] == "logout") {
+            ?>
                 <script>
-                    alert("Berhasil Log Out");
+                    alert("Berhasil LogOut");
                 </script>
             <?php
-            } elseif ($_GET['pesan'] == "sudah") {
-                ?>
+        } elseif ($_GET['pesan'] == "sudah") {
+            ?>
                 <script>
                     alert("Berhasil Registrasi");
                 </script>
             <?php
-            }
         }
-    ?>
+    }
+?>
 
+<script>
+    setTimeout(() => {
+    const url = new URL(window.location);
+    url.searchParams.delete('pesan');
+    window.history.replaceState({}, document.title, url.pathname);
+    }, 3000);
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

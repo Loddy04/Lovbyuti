@@ -1,5 +1,6 @@
 <?php
 include 'koneksi.php';
+session_start();
 $treatments = $connect->query("SELECT * FROM treatmens");
 while ($t = $treatments->fetch_assoc()) {
     $id_treatment = $t['id_treatmen'];
