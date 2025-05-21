@@ -108,73 +108,166 @@ while ($row = mysqli_fetch_assoc($result)) {
             </div>
         </div>
     </div>
-</div><br><br><br><br>
+</div>
 
 <!-- OUTLET CARDS -->
 <div class="branch-cards-section">
-    <div class="container">
-        <h2 class="section-title">Outlet Cabang LovByuti</h2>
-        <p class="section-desc">Temukan cabang LovByuti terdekat dengan lokasi Anda untuk mendapatkan perawatan terbaik.</p>
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/clinic1.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <div class="caption-card">
+            <h3><?= $o1['nama'] ?></h3>
+            <p class="outlet-address"><?= $o1['alamat'] ?></p>
+            <p class="outlet-phone"><?= $o1['no_hp'] ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/clinic2.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <div class="caption-card">
+            <h3><?= $o2['nama'] ?></h3>
+            <p class="outlet-address"><?= $o2['alamat'] ?></p>
+            <p class="outlet-phone"><?= $o2['no_hp'] ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/clinic3.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <div class="caption-card">
+            <h3><?= $o3['nama'] ?></h3>
+            <p class="outlet-address"><?= $o3['alamat'] ?></p>
+            <p class="outlet-phone"><?= $o3['no_hp'] ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/clinic4.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <div class="caption-card">
+            <h3><?= $o4['nama'] ?></h3>
+            <p class="outlet-address"><?= $o4['alamat'] ?></p>
+            <p class="outlet-phone"><?= $o4['no_hp'] ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/clinic5.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <div class="caption-card">
+            <h3><?= $o5['nama'] ?></h3>
+            <p class="outlet-address"><?= $o5['alamat'] ?></p>
+            <p class="outlet-phone"><?= $o5['no_hp'] ?></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
 
-        <div class="branch-cards-container">
-            <!-- Top row - 3 cards -->
-            <div class="branch-cards-row">
-                <!-- Card 1 -->
-                <div class="branch-card">
-                    <div class="branch-card-body">
-                        <h3 class="branch-title"><?= $o1['nama'] ?></h3>
-                        <p class="branch-address"><?= $o1['alamat'] ?></p>
-                        <p class="branch-phone"><?= $o1['no_hp'] ?></p>
-                        <a href="#" class="btn-visit">Kunjungi</a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="branch-card">
-                    <div class="branch-card-body">
-                        <h3 class="branch-title"><?= $o2['nama'] ?></h3>
-                        <p class="branch-address"><?= $o2['alamat'] ?></p>
-                        <p class="branch-phone"><?= $o2['no_hp'] ?></p>
-                        <a href="#" class="btn-visit">Kunjungi</a>
-                    </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="branch-card">
-                    <div class="branch-card-body">
-                        <h3 class="branch-title"><?= $o3['nama'] ?></h3>
-                        <p class="branch-address"><?= $o3['alamat'] ?></p>
-                        <p class="branch-phone"><?= $o3['no_hp'] ?></p>
-                        <a href="#" class="btn-visit">Kunjungi</a>
-                    </div>
-                </div>
+<!-- ABOUT US -->
+  <div class="container">
+        <section class="why-zap-section">
+            <h2 class="section-title">KENAPA MEMILIH ZAP?</h2>
+            <p class="section-subtitle">Kami berkomitmen untuk selalu memberikanmu pelayanan terbaik sebak mungkin</p>
+            
+            <div class="doctors-image">
+                <img src="../assets/indeximg2.jpg" alt="Dokter ZAP profesional dalam seragam putih">
             </div>
             
-            <!-- Bottom row - 2 cards -->
-            <div class="branch-cards-row justify-content-center">
-                <!-- Card 4 -->
-                <div class="branch-card">
-                    <div class="branch-card-body">
-                        <h3 class="branch-title"><?= $o4['nama'] ?></h3>
-                        <p class="branch-address"><?= $o4['alamat'] ?></p>
-                        <p class="branch-phone"><?= $o4['no_hp'] ?></p>
-                        <a href="#" class="btn-visit">Kunjungi</a>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 18c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8zM11 7h2v6h-2zm0 8h2v2h-2z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Berpengalaman</h3>
+                        <p>Dengan lebih dari 15 tahun di dunia kecantikan, ZAP adalah destinasi terpercaya dan terlengkap untuk perawatan wajah dan tubuh di Indonesia.</p>
                     </div>
                 </div>
                 
-                <!-- Card 5 -->
-                <div class="branch-card">
-                    <div class="branch-card-body">
-                        <h3 class="branch-title"><?= $o5['nama'] ?></h3>
-                        <p class="branch-address"><?= $o5['alamat'] ?></p>
-                        <p class="branch-phone"><?= $o5['no_hp'] ?></p>
-                        <a href="#" class="btn-visit">Kunjungi</a>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95A5.469 5.469 0 0 1 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11A2.98 2.98 0 0 1 22 15c0 1.65-1.35 3-3 3z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Pelayanan Ramah</h3>
+                        <p>Staf kami selalu mengutamakan pelayanan personal dengan kenyamanan dan keramahan.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.17-5.24l-4.4-4.4L10.59 9.17l4.4 4.4-2.82 2.82z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Teknologi Terkini</h3>
+                        <p>ZAP menggunakan teknologi terbaik yang terbukti efektif, dengan standar medis yang ketat.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Tepat Waktu</h3>
+                        <p>Waktumu berharga, dan ZAP selalu tepat waktu dalam setiap treatment.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Ratusan Lokasi</h3>
+                        <p>Lebih dari 100 outlet ZAP terintegrasi siap melayani Anda di seluruh Indonesia.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Dokter Bersertifikasi</h3>
+                        <p>Dokter ZAP berpengalaman, mengutamakan keamanan, dan memberikan solusi efektif dengan penuh perhatian.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</div><br><br>
 
 <!-- Footer -->
 <div class="footer-container"> 
