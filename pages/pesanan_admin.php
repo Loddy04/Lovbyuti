@@ -13,11 +13,11 @@ session_start();
 <body>
         <table border="1">
         <tr>
-            <td>id booking</td>
+            <td>id</td>
             <td>nama</td>
-            <td>outlet</td>
-            <td>treatment</td>
-            <td>therapist</td>
+            <td>alamat</td>
+            <td>telepon</td>
+            <td>email</td>
             <td>keluhan</td>
             <td>tanggal</td>
             <td>jam</td>

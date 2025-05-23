@@ -39,22 +39,22 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 <body>  
 <!-- NAVBAR -->
-<div class="navdex">
-    <div class="navbarpage">
-        <header class="d-flex">
-            <span class="brand">LOVBYUTI</span>
-            <ul class="nav">
-                <li class="nav-item"><a class="listnav" href="#">Home</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Treatmen</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Outlet</a></li>
-                <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
-            </ul>
-        </header>
+    <div class="navdex">
+        <div class="navbarpage">
+            <header class="d-flex">
+                <span class="brand">LOVBYUTI</span>
+                <ul class="nav">
+                    <li class="nav-item"><a class="listnav" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="listnav" href="#treatmen">Treatmen</a></li>
+                    <li class="nav-item"><a class="listnav" href="#outlet">Outlet</a></li>
+                    <li class="nav-item"><a class="listnav" href="#about_us">About Us</a></li>
+                </ul>
+            </header>
+        </div>
     </div>
-</div>
 
     <!-- TEXT IMAGE 1 -->
-    <div class="txtimg1">
+    <div class="txtimg1" id="home">
         <!-- teks card -->
         <div class="text-overlay">
             <h1>Reveal Your True Glow with LovByuti.</h1>
@@ -73,13 +73,10 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
 
 <!-- TREATMENS -->
-<div class="branch-cards-section2">
+<div class="branch-cards-section2" id="treatmen">
     <div class="container">
         <h2 class="section-title2">TOP TREATMENS</h2>
         <p class="section-desc">Top treatmen yang dimiliki klinik LovByuti.</p>
-
-        <div class="branch-cards-container">
-            <!-- Top row - 3 cards -->
             <div class="branch-cards-row">
                 <!-- Card 1 -->
                 <div class="branch-card2">
@@ -88,7 +85,6 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <a href="#" class="btn-visit2">Lihat Detail</a>
                     </div>
                 </div>
-
                 <!-- Card 2 -->
                 <div class="branch-card2">
                     <div class="branch-card-body">
@@ -106,12 +102,11 @@ while ($row = mysqli_fetch_assoc($result)) {
                 </div>
             </div>
             </div>
-        </div>
     </div>
 </div>
 
 <!-- OUTLET CARDS -->
-<div class="branch-cards-section">
+<div class="branch-cards-section" id="outlet">
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -184,9 +179,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 </div>
 
 <!-- ABOUT US -->
-  <div class="container">
+  <div class="container" id="about_us">
         <section class="why-zap-section">
-            <h2 class="section-title">KENAPA MEMILIH ZAP?</h2>
+            <h2 class="section-title">KENAPA MEMILIH LOVBYUTI?</h2>
             <p class="section-subtitle">Kami berkomitmen untuk selalu memberikanmu pelayanan terbaik sebak mungkin</p>
             
             <div class="doctors-image">
@@ -202,7 +197,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div>
                     <div class="feature-content">
                         <h3>Berpengalaman</h3>
-                        <p>Dengan lebih dari 15 tahun di dunia kecantikan, ZAP adalah destinasi terpercaya dan terlengkap untuk perawatan wajah dan tubuh di Indonesia.</p>
+                        <p>Dengan lebih dari 15 tahun di dunia kecantikan, LOVBYUTI adalah destinasi terpercaya dan terlengkap untuk perawatan kulit di Indonesia.</p>
                     </div>
                 </div>
                 
@@ -226,7 +221,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div>
                     <div class="feature-content">
                         <h3>Teknologi Terkini</h3>
-                        <p>ZAP menggunakan teknologi terbaik yang terbukti efektif, dengan standar medis yang ketat.</p>
+                        <p>LOVBYUTI menggunakan teknologi terbaik yang terbukti efektif, dengan standar medis yang ketat.</p>
                     </div>
                 </div>
                 
@@ -238,7 +233,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div>
                     <div class="feature-content">
                         <h3>Tepat Waktu</h3>
-                        <p>Waktumu berharga, dan ZAP selalu tepat waktu dalam setiap treatment.</p>
+                        <p>Waktumu berharga, dan LOVBYUTI selalu tepat waktu dalam setiap treatment.</p>
                     </div>
                 </div>
                 
@@ -249,8 +244,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                         </svg>
                     </div>
                     <div class="feature-content">
-                        <h3>Ratusan Lokasi</h3>
-                        <p>Lebih dari 100 outlet ZAP terintegrasi siap melayani Anda di seluruh Indonesia.</p>
+                        <h3>Banyak Lokasi</h3>
+                        <p>Outlet LOVBYUTI yang tersebar dan terintegrasi siap melayani Anda di seluruh Jogja.</p>
                     </div>
                 </div>
                 
@@ -262,7 +257,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div>
                     <div class="feature-content">
                         <h3>Dokter Bersertifikasi</h3>
-                        <p>Dokter ZAP berpengalaman, mengutamakan keamanan, dan memberikan solusi efektif dengan penuh perhatian.</p>
+                        <p>Dokter  LOVBYUTI berpengalaman, mengutamakan keamanan, dan memberikan solusi efektif dengan penuh perhatian.</p>
                     </div>
                 </div>
             </div>
@@ -370,7 +365,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     const url = new URL(window.location);
     url.searchParams.delete('pesan');
     window.history.replaceState({}, document.title, url.pathname);
-    }, 3000);
+    }, 1000);
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
