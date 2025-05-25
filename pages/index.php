@@ -82,14 +82,14 @@ while ($data2 = mysqli_fetch_assoc($sql2)) {
                 <div class="branch-card2">
                     <div class="branch-card-body">
                         <h3 class="branch-title2"><?= $t1['nama_treatmen'] ?></h3>
-                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                        <a href="treatmen.php" class="btn-visit2">Lihat Detail</a>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="branch-card2">
                     <div class="branch-card-body">
                         <h3 class="branch-title2"><?= $t2['nama_treatmen'] ?></h3>
-                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                        <a href="treatmen.php" class="btn-visit2">Lihat Detail</a>
                     </div>
                 </div>
                 
@@ -97,7 +97,7 @@ while ($data2 = mysqli_fetch_assoc($sql2)) {
                 <div class="branch-card2">
                     <div class="branch-card-body">
                         <h3 class="branch-title2"><?= $t3['nama_treatmen'] ?></h3>
-                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                        <a href="treatmen.php" class="btn-visit2">Lihat Detail</a>
                     </div>
                 </div>
             </div>

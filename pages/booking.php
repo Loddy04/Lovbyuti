@@ -40,8 +40,8 @@ $hariIndo = $mapHari[$dayName] ?? 'Hari tidak valid';
             $error = "Mohon maaf, semua cabang klinik tutup pada hari Minggu.";
         } else {
             // Cek apakah treatment membutuhkan dermatologist
-            $treatmentReq = $connect->query("SELECT membutuhkan_dermatologist FROM treatmens WHERE id_treatmen = '$id_treatment'");
-            $requiresDerm = $treatmentReq->fetch_assoc()['membutuhkan_dermatologist'] ?? 0;
+            $treatmentReq = $connect->query("SELECT oleh_dermatologis FROM treatmens WHERE id_treatmen = '$id_treatment'");
+            $requiresDerm = $treatmentReq->fetch_assoc()['oleh_dermatologist'] ?? 0;
 
             // Query untuk mencari dokter yang tersedia
             $queryTherapist = "SELECT t.id_therapist 

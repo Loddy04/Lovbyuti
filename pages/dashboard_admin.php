@@ -16,32 +16,30 @@ if (!isset($_SESSION['id'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div class="navbarpage container">
-        <header class="d-flex flex-wrap justify-content-center">
-            <span href="/" class="d-flex align-items-center mb-3 mb-md-0">
-                <svg class="bi me-2" width="20" height="20" aria-hidden="true"></svg>
+<!-- NAVBAR -->
+    <div class="navdex">
+        <div class="navbarpage">
+            <header class="d-flex">
                 <span class="brand">LOVBYUTI</span>
-            </span>
-    
-            <ul class="navbarpage nav">
-                <li class="nav-item"><a class="listnav" href="#">Home</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Treatment</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Blog</a></li>
-                <li class="nav-item"><a class="listnav" href="#">About Us</a></li>
-                <li class="nav-item"><a class="listnav" href="#">Contact Us</a></li>
-            </ul>
-        </header>
+                <ul class="nav">
+                    <li class="nav-item"><a class="listnav" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="listnav" href="#treatmen">Treatmen</a></li>
+                    <li class="nav-item"><a class="listnav" href="#outlet">Outlet</a></li>
+                    <li class="nav-item"><a class="listnav" href="#about_us">About Us</a></li>
+                </ul>
+            </header>
+        </div>
     </div>
 
     <!-- TEXT IMAGE 1 -->
-    <div class="txtimg1">
+    <div class="txtimg1" id="home">
         <!-- teks card -->
         <div class="text-overlay">
-            <h1>Selamat datang, <?php echo $_SESSION['nama']; ?>!</h1><br><br>
+            <h1>SELAMAT DATANG, <?=$_SESSION['nama']?></h1>
+            <br><br>
             <div class="mulai">
-                <div><a class="login" href="pesanan_admin.php">Lihat Pesanan</a></div>
-                <div><a class="regis" href="logout.php">Logout</a></div>
+                <div style="margin-right: 2rem;"><a class="login" href="pesanan_admin.php">Pesanan</a></div>
+                <div><a class="regis" href="logout.php">LogOut</a></div>
             </div>
         </div>
         <!-- img -->

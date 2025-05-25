@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+    exit;
+}
 include 'koneksi.php';
 $treatments = $connect->query("SELECT * FROM treatmens"); ?>
 
@@ -31,7 +36,7 @@ $treatments = $connect->query("SELECT * FROM treatmens"); ?>
         </div>
         <div class="center-nav">
             <ul class="nav">
-            <li class="nav-item"><a class="listnav" href="#home">Home</a></li>
+            <li class="nav-item"><a class="listnav" href="dashboard.php">Home</a></li>
             <li class="nav-item"><a class="listnav" href="#treatmen">Treatmen</a></li>
             <li class="nav-item"><a class="listnav" href="#outlet">Outlet</a></li>
             <li class="nav-item"><a class="listnav" href="#about_us">About Us</a></li>

@@ -6,6 +6,36 @@ if (!isset($_SESSION['id'])) {
 }
 ?>
 
+<?php
+include 'koneksi.php';
+$sql1 = mysqli_query($connect, "SELECT * FROM treatmens");
+$sql2 = mysqli_query($connect, "SELECT * FROM outlets");
+
+while ($data1 = mysqli_fetch_assoc($sql1)) {
+    if ($data1['id_treatmen'] == 11) {
+        $t1 = $data1;
+    } elseif ($data1['id_treatmen'] == 22) {
+        $t2 = $data1;
+    } elseif ($data1['id_treatmen'] == 12) {
+        $t3 = $data1;
+    }
+}
+
+while ($data2 = mysqli_fetch_assoc($sql2)) {
+    if ($data2['id_outlet'] == 1) {
+        $o1 = $data2;
+    } elseif ($data2['id_outlet'] == 2) {
+        $o2 = $data2;
+    } elseif ($data2['id_outlet'] == 3) {
+        $o3 = $data2;
+    } elseif ($data2['id_outlet'] == 4) {
+        $o4 = $data2;
+    } elseif ($data2['id_outlet'] == 5) {
+        $o5 = $data2;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,8 +70,9 @@ if (!isset($_SESSION['id'])) {
       </div>
     </div>
 
+    <!-- SIDE BAR -->
     <div class="sidebar">
-      <header>Lovbyuti</header>
+      <header><?php echo $_SESSION['nama']; ?></header>
       <input type="checkbox" id="dashboard-toggle" hidden>
       <label class="dropdown-toggle" for="dashboard-toggle">
         <i class="fas fa-qrcode"></i>
@@ -95,14 +126,14 @@ if (!isset($_SESSION['id'])) {
                 <div class="branch-card2">
                     <div class="branch-card-body">
                         <h3 class="branch-title2"><?= $t1['nama_treatmen'] ?></h3>
-                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                        <a href="treatmen.php" class="btn-visit2">Lihat Detail</a>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="branch-card2">
                     <div class="branch-card-body">
                         <h3 class="branch-title2"><?= $t2['nama_treatmen'] ?></h3>
-                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                        <a href="treatmen.php" class="btn-visit2">Lihat Detail</a>
                     </div>
                 </div>
                 
@@ -110,7 +141,7 @@ if (!isset($_SESSION['id'])) {
                 <div class="branch-card2">
                     <div class="branch-card-body">
                         <h3 class="branch-title2"><?= $t3['nama_treatmen'] ?></h3>
-                        <a href="#" class="btn-visit2">Lihat Detail</a>
+                        <a href="treatmen.php" class="btn-visit2">Lihat Detail</a>
                     </div>
                 </div>
             </div>

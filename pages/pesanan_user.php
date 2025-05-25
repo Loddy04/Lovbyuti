@@ -45,7 +45,7 @@ $result = mysqli_query($connect, $query);
             <li class="nav-item"><a class="listnav" href="dashboard.php">About Us</a></li>
             </ul>
         </div>
-        </div>
+    </div>
 
         <div class="sidebar">
         <header>Lovbyuti</header>
