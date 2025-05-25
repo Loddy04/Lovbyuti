@@ -1,0 +1,132 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgb(226, 40, 130),
+        rgba(0, 0, 0, 0.647)),
+        url(../assets/regisimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 20px !important;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(254, 218, 252, 0.795) !important;
+    max-width: 900px;
+    width: 90%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgb(226, 40, 130),
+        rgba(0, 0, 0, 0.647)),
+        url(../assets/regisimg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    overflow-y: auto;
+    max-height: 90vh;
+    width: 70%;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 20px !important;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(254, 218, 252, 0.795) !important;
+    max-width: 900px;
+    width: 90%;
+}
+
+.doctor-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+.doctor-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.time-slot {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.available {
+    background-color: #d4edda;
+}
+.unavailable {
+    background-color: #f8d7da;
+    text-decoration: line-through;
+    color: #721c24;
+    
+}
+.schedule-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+.error-message {
+    color: #dc3545;
+    margin-top: 5px;
+}
+.badge-dermatologist {
+    background-color: #6f42c1;
+}
+.badge-therapist {
+    background-color: #20c997;
+}
+
+.tombol {
+    display: flex;
+    justify-content: space-between;
+}
+
+#register {
+    border: 2px solid rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0);
+    border-radius: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    height: 35px;
+    width: 70px;
+}
