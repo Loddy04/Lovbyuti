@@ -1,4 +1,13 @@
 <?php
+session_start();
+if (isset($_SESSION['id'])) {
+    header("Location: dashboard.php");
+    exit;
+} else if (isset($_SESSION['id']) == '999') {
+    header("Location: dashboard_admin.php");
+    exit;
+}
+
 include 'koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,22 +21,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $query = "INSERT INTO users (nama, no_hp, email, password, umur, jenis_kelamin, alamat)
                 VALUES ('$nama', '$no_hp', '$email', '$password', '$umur', '$jenis_kelamin', '$alamat')";
-    $data = mysqli_query($connect, $query);
+
     if (mysqli_query($connect, $query)) {
-        
         header("Location: index.php?pesan=sudah");
     } else {
         echo "Error: " . mysqli_error($connect);
     }
 }
-
 ?>
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LovByuti || Pendaftaran akun</title>
+    <title>Registrasi</title>
     <link rel="stylesheet" href="../style/register.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
@@ -42,41 +49,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="col-sm-12">
                         <label for="user" class="form-label">Username</label>
                         <input type="text" name="nama" class="form-control" id="firstName" placeholder="" value="" required="">
-                        <div class="invalid-feedback">
-                        Valid first name is required.
-                        </div>
                     </div>
                     <!-- NO TELP -->
                     <div class="col-12">
                         <label for="nh" class="form-label">No. Telepon</label>
                         <input type="tel" name="no_hp" class="form-control" id="address" placeholder="" required="">
-                        <div class="invalid-feedback">
-                        Please enter your phone number.
-                        </div>
                     </div>
                     <!-- EMAIL -->
                     <div class="col-12">
                         <label for="mail" class="form-label">Email <span class="text-body-secondary"></span></label>
                         <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com">
-                        <div class="invalid-feedback">
-                        Please enter a valid email addres.
-                        </div>
                     </div>
                     <!-- PASSWORD -->
                     <div class="col-12">
                     <label for="pw" class="form-label">Paswword <span class="text-body-secondary"></span></label>
                         <input type="password" name="password" class="form-control" id="pw" placeholder="">
-                        <div class="invalid-feedback">
-                        Please enter a password.
-                        </div>
                     </div>
                     <!-- UMUR -->
                 <div class="col-md-6">
                     <label for="ur" class="form-label">Umur</label><br>   
                     <input class="form-control" type="number" name="umur" id="ur"><br>
-                    <div class="invalid-feedback">
-                    Please verify your age.
-                    </div>
                 </div>
                 <!-- GENDER -->
                 <div class="my-0">

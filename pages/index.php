@@ -1,29 +1,29 @@
 <?php
 include 'koneksi.php';
-$result = mysqli_query($connect, "SELECT * FROM outlets");
-$hasil = mysqli_query($connect, "SELECT * FROM treatmens");
+$sql1 = mysqli_query($connect, "SELECT * FROM treatmens");
+$sql2 = mysqli_query($connect, "SELECT * FROM outlets");
 
-while ($baris = mysqli_fetch_assoc($hasil)) {
-    if ($baris['id_treatmen'] == 11) {
-        $t1 = $baris;
-    } elseif ($baris['id_treatmen'] == 22) {
-        $t2 = $baris;
-    } elseif ($baris['id_treatmen'] == 24) {
-        $t3 = $baris;
+while ($data1 = mysqli_fetch_assoc($sql1)) {
+    if ($data1['id_treatmen'] == 11) {
+        $t1 = $data1;
+    } elseif ($data1['id_treatmen'] == 22) {
+        $t2 = $data1;
+    } elseif ($data1['id_treatmen'] == 24) {
+        $t3 = $data1;
     }
 }
 
-while ($row = mysqli_fetch_assoc($result)) {
-    if ($row['id_outlet'] == 1) {
-        $o1 = $row;
-    } elseif ($row['id_outlet'] == 2) {
-        $o2 = $row;
-    } elseif ($row['id_outlet'] == 3) {
-        $o3 = $row;
-    } elseif ($row['id_outlet'] == 4) {
-        $o4 = $row;
-    } elseif ($row['id_outlet'] == 5) {
-        $o5 = $row;
+while ($data2 = mysqli_fetch_assoc($sql2)) {
+    if ($data2['id_outlet'] == 1) {
+        $o1 = $data2;
+    } elseif ($data2['id_outlet'] == 2) {
+        $o2 = $data2;
+    } elseif ($data2['id_outlet'] == 3) {
+        $o3 = $data2;
+    } elseif ($data2['id_outlet'] == 4) {
+        $o4 = $data2;
+    } elseif ($data2['id_outlet'] == 5) {
+        $o5 = $data2;
     }
 }
 ?>

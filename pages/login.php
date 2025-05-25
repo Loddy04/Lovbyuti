@@ -7,16 +7,15 @@
         $password = $_POST['password'];
 
         $query = "SELECT * FROM users WHERE email = '$email' and password = '$password'";
-        $data = mysqli_query($connect, $query);
+        $result = mysqli_query($connect, $query);
 
 
-        if (mysqli_num_rows($data) > 0) {
-            $user = mysqli_fetch_array($data);
-            $_SESSION['user'] = $data;
-            $_SESSION['id'] = $user['id_user'];
-            $_SESSION['nama'] = $user['nama'];
+        if (mysqli_num_rows($result) == 1) {
+            $data = mysqli_fetch_array($result);
+            $_SESSION['id'] = $data['id_user'];
+            $_SESSION['nama'] = $data['nama'];
             
-            if ($user['email'] == 'admin123@gmail.com' && $user['password'] == 'admin123') {
+            if ($data['email'] == 'admin123@gmail.com' && $data['password'] == 'admin123') {
             header("Location: dashboard_admin.php");
         } else {
             header("Location: dashboard.php");
@@ -28,6 +27,15 @@
         exit;
     }
 }
+
+    if (isset($_SESSION['id'])) {
+        if ($_SESSION['id'] == '999') {
+            header("Location: dashboard_admin.php");
+        } else {
+            header("Location: dashboard.php");
+        }
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
