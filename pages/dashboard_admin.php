@@ -22,10 +22,6 @@ if (!isset($_SESSION['id'])) {
             <header class="d-flex">
                 <span class="brand">LOVBYUTI</span>
                 <ul class="nav">
-                    <li class="nav-item"><a class="listnav" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="listnav" href="#treatmen">Treatmen</a></li>
-                    <li class="nav-item"><a class="listnav" href="#outlet">Outlet</a></li>
-                    <li class="nav-item"><a class="listnav" href="#about_us">About Us</a></li>
                 </ul>
             </header>
         </div>

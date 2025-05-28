@@ -18,16 +18,11 @@ session_start();
             <header class="d-flex">
                 <span class="brand">LOVBYUTI</span>
                 <ul class="nav">
-                    <li class="nav-item"><a class="listnav" href="dashboard_admin.php">Home</a></li>
-                    <li class="nav-item"><a class="listnav" href="#treatmen">Treatmen</a></li>
-                    <li class="nav-item"><a class="listnav" href="#outlet">Outlet</a></li>
-                    <li class="nav-item"><a class="listnav" href="#about_us">About Us</a></li>
                 </ul>
             </header>
         </div>
     </div>
 
-    
 <!-- RIWAYAT BOOKING USER-->
     <div class="container-fluid">
         <div class="card shadow m-auto p-auto">
@@ -117,6 +112,10 @@ session_start();
             </div>
 
         </div>
+    </div>
+
+    <div class="d-flex justify-content-end" style="margin-right: 100px;">
+        <a href="dashboard_admin.php"><button class="btn btn-success" style="width: 100px; font-size:20px">Home</button></a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>

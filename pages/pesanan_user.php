@@ -4,8 +4,9 @@ include 'koneksi.php';
 
 $id_user = $_SESSION['id']; 
 
-$query = "SELECT b.*, t.nama_treatmen, o.nama
+$query = "SELECT b.*, t.nama_treatmen, o.nama, th.nama AS nama_therapist
           FROM bookings b
+          JOIN therapists th ON b.id_therapist = th.id_therapist
           LEFT JOIN treatmens t ON b.id_treatmen = t.id_treatmen
           LEFT JOIN outlets o ON b.id_outlet = o.id_outlet
           WHERE b.id_user = '$id_user'
@@ -94,6 +95,7 @@ $result = mysqli_query($connect, $query);
                         <th>No</th>
                         <th>Outlet</th>
                         <th>Treatment</th>
+                        <th>Therapist</th>
                         <th>Keluhan</th>
                         <th>Tanggal</th>
                         <th>Jam</th>
@@ -106,6 +108,7 @@ $result = mysqli_query($connect, $query);
                         <td><?=$no?></td>
                         <td><?=$row['nama']?></td>
                         <td><?=$row['nama_treatmen']?></td>
+                        <td><?=$row['nama_therapist']?></td>
                         <td><?=$row['keluhan']?></td>
                         <td><?=$row['tanggal']?></td>
                         <td><?=$row['jam']?></td>
