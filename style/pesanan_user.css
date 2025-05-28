@@ -26,15 +26,8 @@ body{
     right: 0;
     z-index: 9999;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    gap: 1rem;
+    gap: 1rem; 
     font-family: 'Cormorant Garamond', serif;
-}
-
-/* Brand kiri */
-.brand {
-    font-size: 24px;
-    font-weight: bold;
-    color: rgb(226, 40, 130);
 }
 
 /* Kontainer navbar di tengah */
@@ -45,106 +38,31 @@ body{
   width: 100%;
 }
 
-/* Menu */
+/* Brand kiri */
 .nav {
-    list-style: none;
-    display: flex;
-    gap: 5rem;
-    margin: 0;
-    padding: 0;
-}
-
-.left-nav {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.center-nav {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-}
-
-.listnav {
-    color: black;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.listnav:hover {
+.brand {
+    font-size: 24px;
+    font-weight: bold;
     color: rgb(226, 40, 130);
-}
-
-.sidebar{
-  position: fixed;
-  /* overflow-y: auto; */
-  top: 70px;
-  width: 240px;
-  left: -240px;
-  height: calc(100% - 70px);;
-  background-color: rgb(255, 245, 252);
-  transition: all .5s ease;
-  z-index: 900;
-}
-.sidebar header{
-  font-size: 28px;
-  color: rgb(80, 25, 80);
-  line-height: 70px;
-  text-align: center;
-  background-color: rgb(255, 245, 252);
-  user-select: none;
-  font-family: 'Lato', sans-serif;
-}
-.sidebar a{
-  display: flex;
-  align-items: center;
-  height: 65px;
-  width: 100%;
-  color: rgb(80, 25, 80);
-  line-height: 65px;
-  padding-left: 30px;
-  padding-right: 30px;
-  box-sizing: border-box;
-  border-left: 5px solid transparent;
-  font-family: 'Lato', sans-serif;
-  transition: all .5s ease;
-}
-.sidebar a.active,.sidebar a:hover{
-  border-left: 5px solid var(--accent-color);
-  color: rgb(80, 25, 80);;
-  background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
-
-}
-.sidebar a i{
-  flex-shrink: 0; 
-  font-size: 23px;
-  margin-right: 16px;
-  line-height: 1;
-}
-.sidebar a span{
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 #check{
   display: none;
 }
+
 .toggle-btn {
   position: fixed;
   top: 10px;
   right: 70px; 
   cursor: pointer;
 }
-#btn, #cancel{
+
+#btn {
   cursor: pointer;
   color: rgb(226, 40, 130);
   border-radius: 5px;
@@ -162,119 +80,6 @@ body{
   text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
   line-height: 45px;
   transition: all .5s ease;
-}
-label #cancel{
-  opacity: 0;
-  visibility: hidden;
-}
-#check:checked ~ .sidebar{
-  left: 0;
-}
-#check:checked ~ label #btn{
-  opacity: 0;
-  visibility: hidden;
-}
-#check:checked ~ label #cancel{
-  opacity: 1;
-  visibility: visible;
-}
-#check:checked ~ .txtimg1 {
-  transform: translateX(240px);
-  transition: transform 0.5s ease;
-}
-
-
-@media(max-width : 860px){
-
-  header,#btn,#cancel{
-    display: inline-block;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .center-nav{
-    display: none;
-  }
-
-}
-
-.sidebar > a.active,.sidebar > a:hover:nth-child(even) {
-  --accent-color: rgb(226, 40, 130);
-  --gradient-color: rgb(255, 192, 232);
-}
-.sidebar a.active,.sidebar > a:hover:nth-child(odd) {
-  --accent-color: rgb(255, 142, 214);
-  --gradient-color: rgb(255, 226, 254);
-}
-
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  height: 65px;
-  width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  box-sizing: border-box;
-  border-left: 5px solid transparent;
-  font-family: 'Lato', sans-serif;
-  color: rgb(80, 25, 80);
-  background-color: rgb(255, 245, 252);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.dropdown-toggle:hover {
-  border-left: 5px solid var(--accent-color);
-  background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
-}
-
-.dropdown-toggle i {
-  margin-right: 16px;
-  font-size: 23px;
-}
-
-.dropdown-toggle .arrow {
-  margin-left: 16px;
-  transition: transform 0.3s ease;
-}
-
-/* Show dropdown when checked */
-#dashboard-toggle:checked + label + .dropdown-content {
-  display: flex;
-}
-/* Rotate arrow */
-#dashboard-toggle:checked + label .arrow {
-  transform: rotate(180deg);
-}
-/* Dropdown content */
-.dropdown-content {
-  display: none;
-  flex-direction: column;
-  background-color: rgb(255, 245, 252);
-  margin-left: 20px;
-  z-index: 999;
-}
-
-.dropdown-content a {
-  display: block;
-  padding-left: 40px;
-  height: 55px;
-  line-height: 55px;
-  color: rgb(80, 25, 80);
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  border-left: 5px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  border-left: 5px solid var(--accent-color);
-  background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
-}
-
-.dropdown-toggle::after {
-  display: none !important;
-  content: none !important;
 }
 
 /* RIWAYAT BOOKING */
@@ -313,71 +118,4 @@ label #cancel{
   font-size: 0.8rem;
   margin-top: 5px;
   display: none;
-}
-
-/* FOOTER */
-.footer-container {
-    width: 100%;
-    position: relative;
-    background-image: 
-        linear-gradient(rgb(226, 40, 130),
-        rgb(172, 17, 92));
-    color: white;
-    padding: 40px 0 0 0;
-    margin-top: auto; 
-    margin-bottom: 0;
-
-}
-
-.footer-container h5 {
-    color: white;
-    font-weight: bold;
-}
-
-.footer-container .nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
-    padding: 4px 0;
-}
-
-.footer-container .nav-link:hover {
-    color: white !important;
-}
-
-.footer-container p {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.footer-container .form-control {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-}
-
-.footer-container .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-container .btn-primary {
-    background-color: white;
-    color: rgb(226, 40, 130);
-    border: none;
-    font-weight: bold;
-}
-
-.footer-container .btn-primary:hover {
-    background-color: rgb(255, 226, 254);
-}
-
-.footer-container .border-top {
-    border-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-.social-icons .bi {
-    fill: white;
-}
-
-/* Footer nav spacing */
-.footer-container .nav.flex-column {
-    gap: 2rem;
-    display: flex;
 }

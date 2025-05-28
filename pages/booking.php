@@ -97,7 +97,7 @@ $selected_treatment = $_POST['treatmen'] ?? '';
 if (($selected_outlet && $selected_date) || isset($_POST['check_doctors'])) {
     $dayName = date('l', strtotime($selected_date));
 $hariIndo = $mapHari[$dayName] ?? 'Hari tidak valid';
-    // Debugging - tambahkan ini untuk memeriksa
+    // Debugging 
     error_log("Tanggal: $selected_date, Hari: $dayName, Hari Indo: $hariIndo");
     // Cek apakah hari Minggu
     $isSunday = ($hariIndo == 'Minggu');
